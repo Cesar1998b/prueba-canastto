@@ -1,0 +1,31 @@
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.login h2{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  color: #424242;
+}
+
+.btn-login{
+  width: clamp(120px,200px,220px);
+  height: 35px;
+  background-color: #5ea9ff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+
