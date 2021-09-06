@@ -1,0 +1,85 @@
+:root{
+  --blue: #5ea9ff;
+}
+
+.products{
+  margin: 4px 8px 16px;
+  padding: 4px 8px 16px;
+}
+
+.title-category{
+  margin: 4px 8px 16px;
+  padding: 4px 8px 16px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #006eff;
+  border-bottom: 1px solid rgb(155, 154, 154);
+}
+
+.box{
+  margin: 4px 8px 16px;
+  margin-top: 22px;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 24px hsla(210, 61%, 16%, .1);
+  transition: .4s;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+}
+
+.container img{
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom: 1px solid rgb(194, 193, 193);
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  padding: 4px 8px 16px;
+  border-radius: 0.75rem;
+}
+
+.wrapper div{
+  margin: 4px 8px 16px;
+  padding: 4px 8px 16px;
+}
+
+.wrapper h4, .wrapper span{
+  font-size: 14px;
+  font-weight: 500;
+  margin: 4px 8px 2px;
+  margin-bottom: 8px;
+}
+
+.wrapper span{
+  font-size: 19px;
+  font-weight: 700;
+  color: rgb(99, 99, 99);
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.btn-buy{
+  width: 90px;
+  height: 40px;
+  background-color: #006eff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 400;
+  cursor: pointer;
+}
+
