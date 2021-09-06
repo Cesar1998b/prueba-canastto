@@ -3,18 +3,27 @@
     <h3 class="title-category" *ngIf="c.ean == undefined">{{ c.name }}</h3>
     <div class="box" *ngIf="c.kind == 2">
       <div class="container">
-        <img [src]="c.img" [alt]="c.name">
+        <img [src]="c.img" [alt]="c.name" />
         <div class="wrapper">
           <div>
             <h4>{{ c.name }}</h4>
-            <span>{{ c.price | currency : 'USD' : 'symbol' : '1.0-0'}}</span>
+            <span>{{ c.price | currency: "USD":"symbol":"1.0-0" }}</span>
           </div>
-          <div>
             <button class="btn-buy">Comprar</button>
-          </div>
         </div>
+      </div>
+    </div>
+    <div class="card" *ngIf="c.kind == 1">
+      <div class="cont">
+        <div>
+          <img [src]="c.img" [alt]="c.name" />
+        </div>
+          <div class="text-content">
+            <h4>{{ c.name }}</h4>
+            <span>{{ c.price | currency: "USD":"symbol":"1.0-0" }}</span>
+        </div>
+        <button class="btn-buy">Comprar</button>
       </div>
     </div>
   </div>
 </div>
-
