@@ -6,8 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  @Input() categories: []; // Categorias de los productos
-  ready = false; //Boolean que nos notifica que categories esta listo para ser usado
+  @Input() categories: []; // Arreglo de categorias y productos ya ordenados entrante desde el componente categories
+  ready = false; //Boolean que nos notifica si categories esta listo para ser usado
 
   constructor() {}
 

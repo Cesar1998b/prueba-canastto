@@ -7,8 +7,8 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent implements OnInit {
-  @Input() products: []; // Productos
-  categories = [];
+  @Input() products: []; // Arreglo entrante con los productos desde el componente product
+  categories = []; //Arreglo de categorias
 
   constructor(private productService: ProductsService) {}
 
@@ -16,6 +16,7 @@ export class CategoriesComponent implements OnInit {
     this.getCategories();
   }
 
+  //Función que obtiene las categorias a través del servicio creado, ordena las categorias y agrega los productos a la categoria correspondiente
   getCategories() {
     this.productService
       .getCategoriesAndProducts()
@@ -26,6 +27,7 @@ export class CategoriesComponent implements OnInit {
       });
   }
 
+  //Función que ordena las categorias con su propieda id
   sortCategories(arr) {
     arr.sort(function (a, b) {
       if (a.id > b.id) {
@@ -38,6 +40,7 @@ export class CategoriesComponent implements OnInit {
     });
   }
 
+  //Función que agrega los productos a la categoria correspondiente
   addProductsInCategories(arr, arr2) {
     this.getCategories();
     for (let i = 0; i < arr.length; i++) {
@@ -59,11 +62,13 @@ export class CategoriesComponent implements OnInit {
     return a;
   }
 
+  //Función que indexa el Object de categories
   indexCategory(arr) {
     var result = Object.keys(arr).map((key) => [Number(key), arr[key]]);
     return result;
   }
 
+  //Función que realiza un flat al arreglo entrante
   flatten(input) {
     const stack = [...input];
     const res = [];

@@ -7,8 +7,8 @@ import { ProductsService } from '../../services/products.service';
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  products = [];
-  img = `https://assets.compramass.com/products/`;
+  products = []; //Arreglo de productos
+  img = `https://assets.compramass.com/products/`; //URL para obtener las imagenes de los productos
 
   constructor(private productService: ProductsService) { }
 
@@ -16,6 +16,7 @@ export class ProductComponent implements OnInit {
     this.getProducts();
   }
 
+  //Función que obtiene los productos a través del servicio creado y agrega la imagene correspondiente a cada producto y por último los ordena
   getProducts() {
     this.productService
       .getCategoriesAndProducts()
@@ -33,6 +34,7 @@ export class ProductComponent implements OnInit {
       });
   }
 
+  //Función que ordena los productos por su respectiva categoria
   sortProductsToCategories(arr){
     arr.sort(function(a,b){
       if(a.product_data.categories.category_id>b.product_data.categories.category_id){
@@ -44,6 +46,7 @@ export class ProductComponent implements OnInit {
     })
   }
 
+  //Función que ordena los productos por la propiedad categories-ordinal
   sortProducts(arr){
     arr.sort(function(a,b){
     if(a.product_data.categories[0].ordinal>b.product_data.categories[0].ordinal){

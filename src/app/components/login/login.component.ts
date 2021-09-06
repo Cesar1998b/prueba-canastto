@@ -8,7 +8,7 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  isLogin = false;
+  isLogin = false; //Boolean que nos indica cuando se ha hecho Login en la aplicación
 
   constructor(private router: Router) { }
 
@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  //Función que verifica si un usuario le ha dado en el boton de Login y guarda el valor true a la key isLogin en el LocalStorage
   saveKey(){
     this.isLogin = true;
     localStorage.setItem('isLogin',this.isLogin.toString());
