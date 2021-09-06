@@ -19,7 +19,12 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Debe comenzar con el login desactivado', () => {
+    expect(component.isLogin).toBeFalsy();
+  });
+
+  it('Debe activar la sesión al dar Login y dejar la variable guardada', () =>{
+    component.saveKey();
+    expect(component.isLogin).toBeTruthy();
   });
 });
