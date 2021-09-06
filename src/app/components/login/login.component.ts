@@ -8,19 +8,19 @@ import { Router } from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  status = false;
+  isLogin = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('status') === 'true'){
+    if(localStorage.getItem('isLogin') === 'true'){
       this.router.navigateByUrl('/products');
     }
   }
 
   saveKey(){
-    this.status = true;
-    localStorage.setItem('status',this.status.toString());
+    this.isLogin = true;
+    localStorage.setItem('isLogin',this.isLogin.toString());
     this.router.navigateByUrl('/products');
   }
 
